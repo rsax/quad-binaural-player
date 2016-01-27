@@ -30,3 +30,8 @@ proguard/
 
 # Android Studio captures folder
 captures/
+<<<<<<< HEAD
+.idea/
+*.iml
+=======
+>>>>>>> cb60019ada6847beee46ba2137d14fac3ff2fee2
