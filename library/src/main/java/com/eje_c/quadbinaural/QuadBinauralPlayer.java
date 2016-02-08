@@ -26,11 +26,20 @@ public class QuadBinauralPlayer {
     }
 
     /**
-     * You must call this method before any methods.
+     * Initialize with default parameter values.
      *
      * @throws IOException
      */
     public void init() throws IOException {
+        init(1, true);
+    }
+
+    /**
+     * You must call this method before any methods.
+     *
+     * @throws IOException
+     */
+    public void init(int ticksPerBuffer, boolean restart) throws IOException {
 
         // Delete old pd file
         if (pd.exists()) {
@@ -42,7 +51,7 @@ public class QuadBinauralPlayer {
 
         final int sampleRate = AudioParameters.suggestSampleRate();
         final int outChannels = AudioParameters.suggestOutputChannels();
-        PdAudio.initAudio(sampleRate, 0, outChannels, 1, true);
+        PdAudio.initAudio(sampleRate, 0, outChannels, ticksPerBuffer, restart);
 
         mediaPlayer = new MediaPlayer();
     }
