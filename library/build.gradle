@@ -34,7 +34,7 @@ uploadArchives {
         mavenDeployer {
             def deployPath = file("$rootDir/repository")
             repository(url: "file://${deployPath.absolutePath}")
-            pom.version = '0.0.1'
+            pom.version = '0.0.2'
             pom.groupId = 'com.eje_c'
             pom.artifactId = 'quadbinaural'
         }
